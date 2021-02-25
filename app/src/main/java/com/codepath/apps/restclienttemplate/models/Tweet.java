@@ -7,12 +7,21 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+
+import com.codepath.apps.restclienttemplate.TimeFormatter;
+
+
 public class Tweet {
 
     public String body;
     public String createdAt;
     public long id;
     public User user;
+
+    public String getGetFormattedTimestamp() {
+
+        return TimeFormatter.getTimeDifference(createdAt);
+    }
 
     public static Tweet fromJson (JSONObject jsonObject) throws JSONException {
         Tweet tweet = new Tweet();
