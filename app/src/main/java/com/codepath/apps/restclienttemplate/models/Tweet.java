@@ -20,7 +20,8 @@ public class Tweet {
 
     public String getGetFormattedTimestamp() {
 
-        return TimeFormatter.getTimeDifference(createdAt);
+        String formattedTime = TimeFormatter.getTimeDifference(createdAt);
+        return formattedTime;
     }
 
     public static Tweet fromJson (JSONObject jsonObject) throws JSONException {
